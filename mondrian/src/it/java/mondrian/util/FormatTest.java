@@ -226,6 +226,9 @@ public class FormatTest extends TestCase {
         checkFormat(null, new BigDecimal("-1"), formatString, "(;1)");
         checkFormat(null, new BigDecimal("0"), formatString, ";Z");
         checkFormat(null, null, formatString, "");
+
+        checkFormat(null, new Double("1.9999999999999995E-6"), "#.#######", ".000002");
+        checkFormat(null, new Double("4.699999999999999E-6"), "#.#######", ".0000047");
     }
 
     /**
